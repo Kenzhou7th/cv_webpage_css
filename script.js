@@ -1,23 +1,25 @@
 function searchSubjects() {
     let input = document.getElementById("searchBar").value.toLowerCase().trim();
     let yearContainers = document.querySelectorAll(".subjects-container > div");
-
     let hasResults = false;
 
     yearContainers.forEach(container => {
         let subjects = container.querySelectorAll("ul li");
         let yearHasMatch = false;
+        let matchedSubjects = [];
 
         subjects.forEach(subject => {
             let text = subject.textContent.toLowerCase();
             if (text.includes(input)) {
-                subject.style.display = "list-item";
+                matchedSubjects.push(subject);
                 yearHasMatch = true;
                 hasResults = true;
-            } else {
-                subject.style.display = "none";
             }
         });
+
+        // Clear old list
+        container.querySelector("ul").innerHTML = "";
+        matchedSubjects.forEach(subject => container.querySelector("ul").appendChild(subject));
 
         container.style.display = yearHasMatch ? "block" : "none";
     });
