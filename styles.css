@@ -9,6 +9,7 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
 /* Navigation Part */
 nav {
     background-color: #94618e;
@@ -66,7 +67,6 @@ ul li {
     margin: 5px 0;
 }
 
-
 /* Footer Part */
 footer {
     background-color: #94618e;
@@ -83,7 +83,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-
 
 /* Education Part */
 #education {
@@ -120,7 +119,7 @@ footer a:hover {
 }
 
 /* Skills Part */
-#skills ul li{
+#skills ul li {
     background-color: white;
     padding: 20px;
     margin: 20px 0;
@@ -128,8 +127,8 @@ footer a:hover {
     box-shadow: 14px 14px 14px rgba(180, 46, 46, 0.2);
 }
 
-/* Portfolio Part, pawala ra's shadow ni Sung Jin Woo */
-#portfolio ul li{
+/* Portfolio Part */
+#portfolio ul li {
     box-shadow: none;
 }
 
@@ -154,28 +153,29 @@ footer a:hover {
 }
 
 .subjects-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     text-align: left;
     margin-top: 20px;
 }
 
-.first-year, .second-year {
-    width: 45%;
+.first-year, .second-year, .third-year, .fourth-year {
     background: #8b698b;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Ensure equal width */
 }
+
+.first-year { grid-column: 1; grid-row: 1; }
+.second-year { grid-column: 2; grid-row: 1; }
+.third-year { grid-column: 1; grid-row: 2; }
+.fourth-year { grid-column: 2; grid-row: 2; }
 
 h3 {
     text-align: center;
-    color: rgb(0, 0, 0);
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
+    color: white;
 }
 
 ul li {
