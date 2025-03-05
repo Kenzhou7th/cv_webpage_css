@@ -2,12 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #F8EEE7;
     text-align: center;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+/* Navigation Part */
 nav {
-    background-color: #333;
+    background-color: #94618e;
     padding: 10px 0;
 }
 
@@ -25,7 +29,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px 15px;
     display: block;
     font-size: 18px;
@@ -33,10 +37,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    background-color: #f87ce8;
     border-radius: 5px;
 }
 
+/* For all sections */
 .container {
     width: 80%;
     margin: auto;
@@ -61,8 +66,10 @@ ul li {
     margin: 5px 0;
 }
 
+
+/* Footer Part */
 footer {
-    background-color: #333;
+    background-color: #94618e;
     color: white;
     padding: 10px;
     margin-top: 20px;
@@ -77,6 +84,8 @@ footer a:hover {
     text-decoration: underline;
 }
 
+
+/* Education Part */
 #education {
     max-width: 100%;
     margin: auto;
@@ -108,4 +117,72 @@ footer a:hover {
 .school {
     flex: 2;
     text-align: left;
+}
+
+/* Skills Part */
+#skills ul li{
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 14px 14px 14px rgba(180, 46, 46, 0.2);
+}
+
+/* Portfolio Part, pawala ra's shadow ni Sung Jin Woo */
+#portfolio ul li{
+    box-shadow: none;
+}
+
+/* Searchbar Part */
+#searchBar {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Subjects Part */
+#subjects {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.subjects-container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.first-year, .second-year {
+    width: 45%;
+    background: #8b698b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin: 5px 0;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
